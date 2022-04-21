@@ -1,0 +1,2 @@
+class CartesianSpace( Dimension ):
+	pass

@@ -1,0 +1,2 @@
+class Matrix( Vector ):
+	pass

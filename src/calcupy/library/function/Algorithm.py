@@ -1,0 +1,2 @@
+class Algorithm( Map ):
+	pass

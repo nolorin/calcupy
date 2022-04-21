@@ -1,0 +1,2 @@
+class CharacterDiscrete( Character ):
+	pass

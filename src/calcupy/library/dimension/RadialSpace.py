@@ -1,0 +1,2 @@
+class RadialSpace( Dimension ):
+	pass
