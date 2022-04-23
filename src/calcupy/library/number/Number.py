@@ -7,6 +7,14 @@ class Number:
 		self.encoded = encoded
 
 	def __str__( self ):
-		out = ''
-
-		return out
+		places = []
+		value = self.value
+		while value > self.base:
+			places.append( value % self.base )
+			value //= self.base
+		places.append( value );
+		if self.base < 65:
+			return ''.join( [ Number.baseEncodeCharacters[p] for p in places[::-1]] )
+		else:
+			return ':'.join( [ Number.baseEncodeCharacters[p//64] + Number.baseEncodeCharacters[p%64] for p in places[::-1]] )
+			
