@@ -18,34 +18,37 @@ class Character:
 		return out
 
 	def __mul__( self, other ):
-		pass
+		out = Character( self.value & other.value )
+		return out
 
 	def __truediv__( self, other ):
-		pass
+		out = Character( self.value | other.value )
+		return out
 
 	def __floordiv__( self, other ):
-		pass
+		out = Character( self.value ^ other.value )
+		return out
 
 	def __mod__( self, other ):
-		pass
+		out = Character( self.value | ( self.value ^ other.value ) )
+		return out
 
 	def __divmod__( self, other ):
-		pass
-
-	def __pow__( self, other ):
-		pass
+		return ( self // other, self % other )
 
 	def __lshift__( self, other ):
-		pass
+		out = Character( self.value << other.value )
+		return out
 
 	def __rshift__( self, other ):
-		pass
+		out = Character( self.value >> other.value )
+		return out
 
 	def __and__( self, other ):
-		pass
+		return self * other
 
 	def __xor__( self, other ):
-		pass
+		return self ^ other
 
 	def __or__( self, other ):
-		pass
+		return self / other
